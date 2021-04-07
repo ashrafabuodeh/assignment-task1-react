@@ -1,0 +1,18 @@
+.menu-item:hover {
+    background-color: red;
+}
+  
+.nav-items {
+    margin: 15px;
+    text-decoration: none;
+}
+  
+@media screen and (max-width :1115px) {
+    .nav-items {
+      align-items: center;
+      border: 1px solid black;
+      color: white;
+      margin: 0;
+      padding: 20px 0 20px 20px;
+    }
+}

@@ -1,0 +1,109 @@
+.main {
+     display: flex;
+     margin-top: 20px;
+     padding: 0 0 32px 0;
+     width: 100%;
+}
+
+body {
+     background: #E5E5E5;
+}
+
+.price {
+     display: flex;
+     justify-content: center;
+     text-decoration: black;
+}
+
+.bag {
+     margin-right: 100px;
+}
+
+.hero-image {
+     background-color: white;
+     margin-top: 75px;
+     text-align: center;
+}
+
+.hero-text {
+     text-align: center;
+}
+
+.google-sans-font {
+     font-family: 'google sans';
+     text-align: center;
+}
+
+.text-below-barnsley-coffee {
+     width: 390px;
+     text-align: left;
+}
+
+.product-sans-font {
+     font-family: "products san";
+     text-align: center;
+}
+
+.hero-banner {
+     flex: 1;
+}
+
+.text-banner {
+     margin: 35px 0 0 60px;
+     padding: 10px 30px;
+}
+
+.coffee-list {
+     align-items: center;
+     display: flex;
+     justify-content: space-around;
+}
+
+.view-more-img {
+     background-color: white;
+     margin-left: 5px;
+     margin-top: 150px;
+     text-align: center;
+     width: 150px;
+}
+
+.text-banner-color {
+     color: red;
+     font-family: "products san";
+}
+
+.title-barsley-coffee {
+     font-size: 60px;
+     margin: 20px 0 0 0;
+     text-align: start;
+}
+
+@media screen and (max-width :1250px) {
+     .hero-image {
+         display: none;
+     }
+}
+
+@media screen and (max-width :1050px) {
+     .viewmore {
+         display: none;
+     }
+}
+
+@media screen and (max-width :621px) {
+     .caramel-frappe-coffee {
+         display: none;
+     }
+}
+
+@media screen and (max-width :926px) {
+     .mocha-late-coffee {
+         display: none;
+     }
+}
+
+@media screen and (max-width :1115px){
+    .text-banner{
+      margin-left: 10px;
+    }
+}

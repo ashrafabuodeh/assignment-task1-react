@@ -1,17 +1,16 @@
 import React, { Component } from "react";
-import '../style.css';
-import mochaLateLarge from '../assets/mocha-late-large.png';
-import icedCoffee from '../assets/iced-coffee.png';
-import caramelFrappe from '../assets/caramel-frappe.png';
-import mochaLate from '../assets/mocha-late.png';
-import viewMore from '../assets/view-more.png';
+import './Main.css';
+import mochaLateLarge from '../../assets/mocha-late-large.png';
+import icedCoffee from '../../assets/iced-coffee.png';
+import caramelFrappe from '../../assets/caramel-frappe.png';
+import mochaLate from '../../assets/mocha-late.png';
+import viewMore from '../../assets/view-more.png';
 
 
 class Main extends Component {
-  state = {  }
   render() { 
     return (  
-      <React.Fragment>
+      <>
       <div className="main">
         <div className="hero-image">
           <img src={mochaLateLarge} alt="mocha late" />
@@ -21,7 +20,10 @@ class Main extends Component {
               Coffee is a brewed drink prepared from roasted coffee beans, the
               seeds of berries from certain Coffea species.
             </p>
-            <pre className="product-sans-font">1 Bag $69.99</pre>
+            <div className="product-sans-font price">
+            <p className="bag"> 1Bag </p>
+            <p>$69.99</p>
+              </div>
           </div>
         </div>
         <div className="hero-banner">
@@ -68,14 +70,14 @@ class Main extends Component {
                 </p>
               </div>
             </div>
-            <div className="coffee-item view-more-img">
+            <div className="view-more-img">
               <img src={viewMore} alt="view more" />
               <p className="product-sans-font">View More</p>
             </div>
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
 
     );
   }

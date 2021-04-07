@@ -1,0 +1,8 @@
+.grid-items {
+    background: linear-gradient(180deg, rgba(228, 239, 233, 0) 0%, #ECF8F1 6.25%);
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    padding: 3rem 0 0 0;
+}
+  

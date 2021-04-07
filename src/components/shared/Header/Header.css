@@ -1,0 +1,68 @@
+.header {
+    align-items: center;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+#all-links-navbar {
+    display: flex;
+}
+
+.active {
+    background-color: yellow;
+}
+  
+.left-header-images {
+    display: flex;
+}
+  
+.profile-image {
+    height: 100px;
+    width: 100px;
+}
+  
+.shopping-cart-size {
+    height: 22px;
+    margin-top: 35px;
+    width: 22px;
+}
+  
+.coffee-bens-size {
+    width: 40px;
+}
+
+.icon-menu {
+    display: none;
+    width: 35px;
+}
+
+@media screen and (max-width :500px) {
+    .profile-image {
+      display: none;
+    }
+  
+    .shopping-cart-size {
+      display: none;
+    }
+}
+
+@media screen and (max-width :1115px) {
+
+    #all-links-navbar {
+        background-color: rgb(145, 139, 139);
+        display: flex;
+        flex-direction: column;
+        margin: 450px 150px 0 1px;
+        position: relative;
+        visibility: visible;
+        width: 100%;
+      }
+    .icon-menu {
+      cursor: pointer;
+      display: inline-block;
+      margin-left: 5px;
+    }   
+}

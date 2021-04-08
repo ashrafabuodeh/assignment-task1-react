@@ -2,49 +2,49 @@ const navItem = [
     {
         id : 1,
         name: 'Home',
-        isClicked :false ,
-        activeItem : "active"
+        activeItem : "nav-items menu-item",
+        href :"/Home"
     },
 
     {
         id : 2 ,
         name: 'About Us',
-        isClicked :false,
-        activeItem : "active"
+        activeItem : "nav-items menu-item",
+        href:"/AboutUs"
     },
 
     {
         id : 3,
         name: 'Ourlands',
-        isClicked :false,
-        activeItem : "active"
+        activeItem : "nav-items menu-item",
+        href : "/Ourlands"
     },
 
     {
         id : 4 ,
         name: 'Suppliers',
-        isClicked :false,
-        activeItem : "active"
+        activeItem : "nav-items menu-item",
+        href :"/Suppliers"
     },
     {
         id : 5 ,
         name: 'Products',
-        isClicked :false,
-        activeItem : "active"
+        activeItem : "nav-items menu-item",
+        href:"/Products"
     },
 
     {
         id : 6,
         name: 'Contact Us',
-        isClicked :false,
-        activeItem : "active"
+        activeItem : "nav-items menu-item",
+        href: "/ContactUs"
     },
 
     {
         id : 7 ,
         name: 'Log Out',
-        isClicked :false,
-        activeItem : "active"
+        activeItem : "nav-items menu-item",
+        href:"LogOut"
     }
 
 ];

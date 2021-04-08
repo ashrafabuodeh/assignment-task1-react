@@ -1,5 +1,6 @@
 import mochaLate from "../../src/assets/mocha-late.png";
 import doubleEspresso from "../../src/assets/double-espresso.png";
+
 const cardInfo = [
     {
         id: 1,
@@ -71,3 +72,4 @@ const cardInfo = [
 
 
 export default cardInfo;
+

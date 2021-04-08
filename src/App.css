@@ -1,5 +1,22 @@
+@font-face {
+    font-family: "google sans";
+    src: 
+    url(../src/fonts/google-sans-cufonfonts-webfont/ProductSans-Light.woff);
+  }
+  
+@font-face {
+    font-family: "products san";
+    src:
+    url(../src/fonts/FontsFree-Net-ProductSans-Regular.ttf);
+}
+
+body {
+  background: #E5E5E5;
+}
+
 .wrapper {
     margin: 0 auto;
     max-width: 1440px;
     width: 100%;
 }
+

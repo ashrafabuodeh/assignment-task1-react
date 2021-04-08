@@ -1,15 +1,3 @@
-@font-face {
-    font-family: "google sans";
-    src: 
-    url(../CardItem/fonts/google-sans-cufonfonts-webfont/ProductSans-Light.woff);
-  }
-  
-@font-face {
-    font-family: "products san";
-    src:
-      url(../CardItem//fonts/FontsFree-Net-ProductSans-Regular.ttf);
-}
-
 .coffee-item {
     background-color: white;
     height: 450px;
@@ -17,4 +5,3 @@
     text-align: center;
     width: 217px;
 }
-  

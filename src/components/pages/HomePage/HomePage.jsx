@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Main from '../../Main/Main'
-import GridItem from '../../GridItems/GridItems';
+import {Main, GridItems} from "../../../components"
 
 class HomePage extends Component {
     render() { 
         return (
             <>
             <Main/>
-             <GridItem/>
+             <GridItems/>
             </>
          );
     }
 }
 export default HomePage;
+

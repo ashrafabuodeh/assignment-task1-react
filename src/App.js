@@ -1,14 +1,29 @@
 import React from 'react';
-import HomePage from '../src/components/pages/HomePage/HomePage';
-import Header from '../src/components/shared/Header/Header';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {HomePage,AboutUs} from '../src/components/pages';
+import {Header} from './components';
 import './App.css';
+
 function App() {
   return (
+    <Router>
     <div className="wrapper">
-      <Header/>
+    <Header/>
+    <Switch>
+    <Route exact path="/">
      <HomePage/>
-    </div>
+     </Route>
+      <Route exact path="/Home">
+     <HomePage/>
+     </Route>
+     <Route exact path="/AboutUs">
+     <AboutUs/>
+     </Route>
+     </Switch>
+   </div>
+    </Router>
   );
 }
 
 export default App;
+

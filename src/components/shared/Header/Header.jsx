@@ -10,74 +10,59 @@ import profileImage from "../../../assets/profile-image.png";
 class Header extends Component {
   state = {
     isClicked: false,
+    navbar: navItem,
   };
   handleBurgerIconClick = () => {
+
     this.setState({ isClicked: !this.state.isClicked });
   };
 
   handleItem = (id) => {
-    navItem.map((item) => (item.isClicked = false));
-    navItem[id - 1].isClicked = true;
-    console.log(navItem[id - 1]);
-    navItem.filter((item) =>
-      id === item.id ? (item.activeItem = "active") : (item.activeItem = "")
+    navItem.map(
+      (item) => ((item.activeItem = "nav-items menu-item"), console.log(item))
     );
+    navItem[id - 1].activeItem = "nav-items menu-item active";
+    this.setState(navItem);
   };
   render() {
-    const isClicked = this.state.isClicked;
     return (
       <>
         <div className="header">
           <div className="coffee-bens">
             <img
-              src={coffeeBeans}
               alt="coffee beans"
               className="coffee-bens-size"
+              src={coffeeBeans}
             />
           </div>
           <img
-            src={iconMenu}
             alt="icon menu"
             className={"icon-menu"}
             onClick={() => this.handleBurgerIconClick()}
+            src={iconMenu}
           />
-          {isClicked ? (
-            <div id="all-links-navbar" style={{ visibility: "visible" }}>
-              {navItem.map((item) => (
-                <NavBar
-                  key={item.id}
-                  id={item.id}
-                  name={item.name}
-                  isClick={item.isClicked}
-                  className={item.activeItem}
-                  handleActiveItem={() => this.handleItem(item.id)}
-                ></NavBar>
-              ))}
-            </div>
-          ) : (
-            <div id="all-links-navbar" style={{ visibility: "hidden" }}>
-              {navItem.map((item) => (
-                <NavBar
-                  key={item.id}
-                  id={item.id}
-                  name={item.name}
-                  isClick={item.isClicked}
-                  className={item.activeItem}
-                  handleActiveItem={() => this.handleItem(item.id)}
-                ></NavBar>
-              ))}
-            </div>
-          )}
+          <div id="all-links-navbar">
+            {navItem.map((item) => (
+              <NavBar
+                handleActiveItem={() => this.handleItem(item.id)}
+                href= {item.href}
+                id={item.id}
+                key={item.id}
+                name={item.name}
+                nameOfClass={item.activeItem}
+              ></NavBar>
+            ))}
+          </div>
           <div className="left-header-images">
             <img
-              src={shoppingCart}
               alt="shopping cart "
               className="shopping-cart-size"
+              src={shoppingCart}
             />
             <img
-              src={profileImage}
               alt="profile image"
               className="profile-image"
+              src={profileImage}
             />
           </div>
         </div>
@@ -87,3 +72,4 @@ class Header extends Component {
 }
 
 export default Header;
+

@@ -5,10 +5,6 @@
      width: 100%;
 }
 
-body {
-     background: #E5E5E5;
-}
-
 .price {
      display: flex;
      justify-content: center;
@@ -90,20 +86,9 @@ body {
      }
 }
 
-@media screen and (max-width :621px) {
-     .caramel-frappe-coffee {
-         display: none;
-     }
-}
-
-@media screen and (max-width :926px) {
-     .mocha-late-coffee {
-         display: none;
-     }
-}
-
 @media screen and (max-width :1115px){
     .text-banner{
       margin-left: 10px;
     }
 }
+

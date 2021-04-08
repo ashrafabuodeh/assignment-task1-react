@@ -9,11 +9,11 @@ class GridItems extends Component {
       <div className="grid-items">
         {cardInfo.map((item) => 
           <CardItem
-            key={item.id}
-            src={item.src}
-            alt={item.img}
-            title={item.title}
-            brief={item.brief}
+            alt = {item.img}
+            brief = {item.brief}
+            key = {item.id}
+            src = {item.src}
+            title = {item.title}
           ></CardItem>
         )}
       </div>

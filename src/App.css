@@ -10,13 +10,11 @@
     url(../src/fonts/FontsFree-Net-ProductSans-Regular.ttf);
 }
 
-body {
-  background: #E5E5E5;
+
+body{
+  background-color: rgb(231, 238, 238);
 }
 
 .wrapper {
-    margin: 0 auto;
-    max-width: 1440px;
-    width: 100%;
+  margin: 0 auto;
 }
-

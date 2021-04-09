@@ -9,7 +9,7 @@ class NavBar extends Component {
       <>
         <Link to={href}
            className={nameOfClass}
-          onClick={()=>handleActiveItem(this.props.id)}
+          onClick={()=>handleActiveItem(id)}
           id={id}
         >
           {name}

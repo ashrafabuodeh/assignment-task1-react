@@ -1,30 +1,33 @@
-import React, { Component } from "react";
-import "./Header.css";
-import NavBar from "../../NavBar/NavBar";
-import navItem from "../../../data/navbar";
+import { NavBar } from "../../../components"
+import { navItem } from "../../../data";
 import coffeeBeans from "../../../assets/coffee-beans.png";
 import iconMenu from "../../../assets/menu.png";
-import shoppingCart from "../../../assets/shopping-cart.png";
 import profileImage from "../../../assets/profile-image.png";
+import React, { Component } from "react";
+import shoppingCart from "../../../assets/shopping-cart.png";
+import "./Header.css";
 
 class Header extends Component {
   state = {
-    isClicked: false,
     navbar: navItem,
   };
   handleBurgerIconClick = () => {
+    if (document.getElementById("all-links-navbar").style.visibility === 'hidden')
+      document.getElementById("all-links-navbar").style.visibility = "visible";
+    else
+      document.getElementById("all-links-navbar").style.visibility = "hidden";
 
-    this.setState({ isClicked: !this.state.isClicked });
   };
 
   handleItem = (id) => {
     navItem.map(
-      (item) => ((item.activeItem = "nav-items menu-item"), console.log(item))
+      (item) => ((item.activeItem = "nav-items menu-item"))
     );
-    navItem[id - 1].activeItem = "nav-items menu-item active";
+    navItem[id].activeItem = "nav-items menu-item active";
     this.setState(navItem);
   };
   render() {
+
     return (
       <>
         <div className="header">
@@ -45,7 +48,7 @@ class Header extends Component {
             {navItem.map((item) => (
               <NavBar
                 handleActiveItem={() => this.handleItem(item.id)}
-                href= {item.href}
+                href={item.href}
                 id={item.id}
                 key={item.id}
                 name={item.name}

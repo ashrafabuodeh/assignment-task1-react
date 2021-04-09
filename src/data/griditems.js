@@ -1,5 +1,5 @@
-import mochaLate from "../../src/assets/mocha-late.png";
 import doubleEspresso from "../../src/assets/double-espresso.png";
+import mochaLate from "../../src/assets/mocha-late.png";
 
 const cardInfo = [
     {
@@ -18,7 +18,6 @@ const cardInfo = [
         brief:
           " Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species.",
       },
-
       {
         id: 3,
         src: mochaLate,
@@ -67,7 +66,6 @@ const cardInfo = [
         brief:
           " Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species.",
       }
-
 ];
 
 

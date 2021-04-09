@@ -1,4 +1,4 @@
-import HomePage from './HomePage/HomePage.jsx'
-import AboutUs from './AboutUs/AboutUs.jsx'
-export {HomePage, AboutUs};
+import AboutUs from './AboutUs/AboutUs.jsx';
+import HomePage from './HomePage/HomePage.jsx';
+export { AboutUs, HomePage };
 

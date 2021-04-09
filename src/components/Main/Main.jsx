@@ -1,12 +1,13 @@
-import React, { Component } from "react";
-import "./Main.css";
-import FlexItems from "../flexItems/FlexItems";
-import cardItemInfo from "../../data/flexItems";
+import { cardItemInfo } from "../../data";
+import { FlexItems } from "../../components";
 import mochaLateLarge from "../../assets/mocha-late-large.png";
+import React, { Component } from "react";
 import viewMore from "../../assets/view-more.png";
+import "./Main.css";
 
 class Main extends Component {
   render() {
+
     return (
       <>
         <div className="main">

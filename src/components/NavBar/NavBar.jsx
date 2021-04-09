@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./NavBar.css";
 
 class NavBar extends Component {
   render() {
-    const {nameOfClass,handleActiveItem,id,name,href} = this.props;
+
+    const { handleActiveItem, href, id, name, nameOfClass } = this.props;
     return (
       <>
         <Link to={href}

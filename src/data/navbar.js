@@ -1,52 +1,46 @@
 const navItem = [
     {
-        id : 1,
-        name: 'Home',
         activeItem : "nav-items menu-item",
-        href :"/Home"
+        href :"/Home",
+        id : 0,
+        name: 'Home'
     },
-
     {
-        id : 2 ,
-        name: 'About Us',
         activeItem : "nav-items menu-item",
-        href:"/AboutUs"
+        href:"/AboutUs",
+        id : 1 ,
+        name: 'About Us'
     },
-
     {
-        id : 3,
-        name: 'Ourlands',
         activeItem : "nav-items menu-item",
-        href : "/Ourlands"
+        href : "/Ourlands",
+        id : 2,
+        name: 'Ourlands'
     },
-
     {
+        activeItem : "nav-items menu-item",
+        href :"/Suppliers",
+        id : 3 ,
+        name: 'Suppliers'
+    },
+    {
+        activeItem : "nav-items menu-item",
+        href:"/Products",
         id : 4 ,
-        name: 'Suppliers',
-        activeItem : "nav-items menu-item",
-        href :"/Suppliers"
+        name: 'Products'
     },
     {
-        id : 5 ,
-        name: 'Products',
         activeItem : "nav-items menu-item",
-        href:"/Products"
+        href: "/ContactUs",
+        id : 5,
+        name: 'Contact Us'
     },
-
     {
-        id : 6,
-        name: 'Contact Us',
         activeItem : "nav-items menu-item",
-        href: "/ContactUs"
-    },
-
-    {
-        id : 7 ,
-        name: 'Log Out',
-        activeItem : "nav-items menu-item",
-        href:"LogOut"
+        href:"LogOut",
+        id : 6 ,
+        name: 'Log Out'
     }
-
 ];
 
 export default navItem ;

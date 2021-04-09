@@ -7,20 +7,21 @@ class Form extends Component {
 
 
 checkFormInputValidate = (event) =>{
+    event.preventDefault();
     const city = event.target[4].value ?? '';
     const companyName = event.target[1].value ?? '';
     const email = event.target[0].value ?? '';
     const password = event.target[2].value ??'';
     const passwordCheck = event.target[3].value ??'';
-    event.preventDefault();
     const account = new Account({email, companyName, password, passwordCheck, city});
     account.validateAccount();
-    account.setAccount();  
+    account.setAccount();
+        
 } 
 
-// handleInput = (event,name) =>{
-//     console.log(event.target[0]);
-// }
+handleInput = (event) =>{
+    console.log(this.props.name)
+}
     render() { 
         return ( 
             <>
@@ -28,22 +29,22 @@ checkFormInputValidate = (event) =>{
 
                      {formFieldInfo.map((item) => (
                         <FormField
-                            contentOfError ={item.contentOfError}
-                            errorClass = {item.errorClass}
-                            formFieldClass = {item.formFieldClass}
-                            id = {item.id}
-                            inputClass = {item.inputClass}
+                            contentOfError={item.contentOfError}
+                            errorClass= {item.errorClass}
+                            formFieldClass= {item.formFieldClass}
+                            id= {item.id}
+                            inputClass= {item.inputClass}
                             key = {item.id}
-                            label ={item.label}
-                            name = {item.name}
-                            placeHolder = {item.placeHolder}
-                            type = {item.type}
+                            label={item.label}
+                            name= {item.name}
+                            placeHolder={item.placeHolder}
+                            type= {item.type}
                         />
                       ))} 
              <div className="form-field">
                 <label>Choose Your City</label>
                 <select name="city" className="input-field">
-                    <option default disabled selected hidden className="selector-field">Choose Your City</option>
+                    <option default className="selector-field">Choose Your City</option>
                     <option value="Jordan">Jordan</option>
                     <option value="Japan">Japan</option>
                     <option value="America">America</option>
@@ -59,7 +60,6 @@ checkFormInputValidate = (event) =>{
          );
     }
 }
-
 
 class Account {
     constructor({email, companyName, password, passwordCheck, city}){
@@ -79,7 +79,6 @@ class Account {
         if (this.isValidateAccount)
             if (localStorage.getItem(this.email) === null) {
                 localStorage.setItem(this.email, accountStringify);
-                // location.replace("../task_1/index.html");
             } else {
                 this.displayError('email-error');
             }
@@ -143,14 +142,16 @@ class Account {
             this.removeError("password-check-error");
         }
     }
-    displayError = (errorId) => {
-        document.getElementById(errorId).style.display = "block";
-    }
-    
-    removeError = (errorId) => {
-        document.getElementById(errorId).style.display = "none";
-    }
-    
+
+
+displayError = (errorId) => {
+    document.getElementById(errorId).style.display = "block";
+}
+
+removeError = (errorId) => {
+    document.getElementById(errorId).style.display = "none";
+}
+
 }
 
 

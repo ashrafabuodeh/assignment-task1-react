@@ -19,7 +19,7 @@ class Header extends Component {
 
   handleItem = (id) => {
     navItem.map(
-      (item) => ((item.activeItem = "nav-items menu-item"), console.log(item))
+      (item) => ((item.activeItem = "nav-items menu-item"))
     );
     navItem[id - 1].activeItem = "nav-items menu-item active";
     this.setState(navItem);

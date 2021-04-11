@@ -3,11 +3,11 @@ import './CardItems.css';
 
 class CardItem extends Component {
   render() {
-    const {alt, brief, key, src, title} = this.props ;
+    const { alt, brief, src, title } = this.props ;
 
     return (
       <>
-        <div className="coffee-item" key={key}>
+        <div className="coffee-item">
             <img src={src} alt={alt} />
             <p className="product-sans-font">
               {title}

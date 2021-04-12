@@ -9,7 +9,7 @@ const cardItemInfo = [
         cardItemClass : "coffee-item iced-coffee ",
         id: 1,
         src: icedCoffee,
-        title: "Iced Coffee",
+        title: "Iced Coffee"
     },
     {
         alt: "caramel frappe",
@@ -17,7 +17,7 @@ const cardItemInfo = [
         cardItemClass : "coffee-item caramel-frappe-coffee ",
         id: 2,
         src: caramelFrappe,
-        title: "Mocha Late",
+        title: "Mocha Late"
     },
     {
         alt: "mocha late",
@@ -25,7 +25,7 @@ const cardItemInfo = [
         cardItemClass : "coffee-item mocha-late-coffee ",
         id: 3,
         src: mochaLate,
-        title: "Mocha Late",
+        title: "Mocha Late"
     }
 ];
 

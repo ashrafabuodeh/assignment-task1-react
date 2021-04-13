@@ -9,20 +9,20 @@ import "./Header.css";
 
 function Header() {
 
-  const [isClicked , setClickedIcon] = useState(false);
+  const [isClicked, setClickedIcon] = useState(false);
   const [navItems, setNavItem] = useState(navItem);
 
-  const toggleDisplay = ()=> {
-    return isClicked ? "displayNavItems" : "" ;
+  const toggleDisplay = () => {
+    return isClicked ? "displayNavItems" : "";
   }
 
   const handleBurgerIconClick = () => {
-   setClickedIcon(!isClicked);
+    setClickedIcon(!isClicked);
   };
- 
+
   const handleItem = (id) => {
     const allNavItems = navItems.map(
-      (item) => item.activeItem = "nav-items menu-item" 
+      (item) => item.activeItem = "nav-items menu-item"
     );
     navItems[id].activeItem = allNavItems[id] + " active";
     setNavItem([...navItems]);
@@ -45,16 +45,16 @@ function Header() {
           onClick={() => handleBurgerIconClick()}
           src={iconMenu}
         />
-        <div className={"all-links-navbar "+ toggleDisplay()}>
+        <div className={"all-links-navbar " + toggleDisplay()}>
           {navItems.map((item) => (
             <NavBar
               handleActiveItem={handleItem}
               href={item.href}
               id={item.id}
               key={item.id}
-              name={item.name}
+              linkName={item.linkName}
               nameOfClass={item.activeItem}
-            ></NavBar>
+            />
           ))}
         </div>
         <div className="left-header-images">

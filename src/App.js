@@ -5,6 +5,7 @@ import React from 'react';
 import './App.css';
 
 function App() {
+
   return (
     <Router>
       <div className="wrapper">
@@ -16,7 +17,7 @@ function App() {
           <Route exact path="/Home">
             <HomePage />
           </Route>
-          <Route exact path="/AboutUs">
+          <Route exact path="/AboutUs/:id">
             <AboutUs />
           </Route>
         </Switch>

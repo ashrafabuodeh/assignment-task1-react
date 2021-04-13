@@ -45,7 +45,7 @@ function Main() {
                 key={item.id}
                 src={item.src}
                 title={item.title}
-              ></FlexItems>
+              />
             ))}
 
             <div className="view-more-img">

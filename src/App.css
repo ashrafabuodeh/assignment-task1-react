@@ -13,10 +13,7 @@
 body {
   background: #E5E5E5;
 }
-
 .wrapper {
-    margin: 0 auto;
-    max-width: 1440px;
-    width: 100%;
+  background-color: rgb(231, 238, 238);
+  margin: 0 auto;
 }
-

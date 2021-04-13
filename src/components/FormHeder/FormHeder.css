@@ -1,0 +1,10 @@
+.header {
+    height: 110px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.header-title {
+    margin-bottom: 20px;
+    margin-right: 15px;
+}

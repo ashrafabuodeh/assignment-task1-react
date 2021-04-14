@@ -1,3 +1,4 @@
+import propTypes from 'prop-types';
 import React from 'react';
 import './FlexItems.css';
 
@@ -15,6 +16,14 @@ function FlexItems({ alt, brief, cardItemClass, src, title }) {
     </div>
   );
 }
+
+FlexItems.propTypes = {
+  alt: propTypes.string.isRequired,
+  brief: propTypes.string.isRequired,
+  cardItemClass: propTypes.string.isRequired,
+  title: propTypes.string.isRequired
+}
+
 
 
 export default FlexItems;

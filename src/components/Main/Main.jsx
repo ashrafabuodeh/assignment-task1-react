@@ -40,6 +40,7 @@ function Main() {
           <div className="coffee-list">
             {cardItemInfo.map((item) => (
               <FlexItems
+                alt={item.alt}
                 brief={item.brief}
                 cardItemClass={item.cardItemClass}
                 key={item.id}

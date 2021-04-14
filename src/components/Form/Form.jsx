@@ -1,88 +1,79 @@
 import { formFieldInfo } from '../../data'
 import { InputField } from '../../components';
-import React, { Component } from 'react';
+import React, { useState } from "react";
 import './Form.css';
 
-class Form extends Component {
+function Form() {
 
-    state = {
-        isvalidate: true,
-        email: "",
-        companyName: "",
-        password: "",
-        passwordCheck: "",
-        city: "",
-        formErrors: {
-            email: "",
-            companyName: "",
-            password: "Password must contains a mix of letters, numbers &symbols",
-            passwordCheck: "",
-            city: "",
+    const [companyName, setCompanyName] = useState('');
+    const [email, setEmail] = useState('');
+    const [isvalidate, setValidate] = useState(true);
+    const [password, setPassword] = useState('');
+    const [passwordCheck, setPasswordCheck] = useState('');
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        validateCompanyName(companyName)
+        validatePassword(password)
+        validatePasswordCheker(passwordCheck);
+        setAccount();
+        console.log(isvalidate)
+    }
+
+    const handleChange = (event, name) => {
+        switch (name) {
+            case "companyName": setCompanyName(event.target.value)
+                break;
+            case "email": setEmail(event.target.value)
+                break;
+            case "password": setPassword(event.target.value)
+                break;
+            case "passwordCheck": setPasswordCheck(event.target.value)
+                break;
         }
 
-    }
-
-
-    handleSubmit = (event) => {
-        event.preventDefault();
-        this.validateCompanyName(this.state.companyName)
-        this.validatePassword(this.state.password)
-        this.validatePasswordCheker(this.state.passwordCheck);
-        console.log(this.state.isvalidate)
-        console.log(this.state)
-    }
-
-    handleChange = (event, name) => {
-        // console.log(event.target.value)
-        if (name === 'companyName')
-            this.setState({ companyName: event.target.value });
-        else
-            if (name === 'email')
-                this.setState({ email: event.target.value });
-            else
-                if (name === 'password') {
-                    this.setState({ password: event.target.value });
-                }
-                else
-                    if (name === 'passwordCheck')
-                        this.setState({ passwordCheck: event.target.value });
-                    else
-                        if (name === 'city')
-                            this.setState({ city: event.target.value });
 
     }
 
-    validateCompanyName = (companyName) => {
+    const validateCompanyName = (companyName) => {
         if (companyName.trim() === '') {
             console.log('company name is empty');
-            this.setState({ isvalidate: this.state.isvalidate = false })
+            setValidate(false);
         }
     }
 
-    validatePassword = (password) => {
+    const validatePassword = (password) => {
         const regularExpressionForPassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
         if (!regularExpressionForPassword.test(password)) {
             console.log('password is error');
-            this.setState({ isvalidate: this.state.isvalidate = false })
+            setValidate(false);
         }
 
     }
 
-    validatePasswordCheker = (passwordCheck) => {
-        if (this.state.password !== this.state.passwordCheck) {
-            console.log('password doesnt match');
-            this.setState({ isvalidate: this.state.isvalidate = false })
+    const setAccount = () => {
+        const accountStringify = JSON.stringify({ email, companyName, password, passwordCheck });
+        if (isvalidate)
+            if (localStorage.getItem(email) === null) {
+                localStorage.setItem(email, accountStringify);
+                } else {
+                    // displayError('email-error');
+                }
+            }
+        
+
+        const validatePasswordCheker  = (email) => {
+            if (password !== passwordCheck) {
+                console.log('password doesnt match');
+                setValidate(false);
+            }
         }
-    }
 
 
 
-
-    render() {
         return (
             <>
-                <form action="" onSubmit={this.handleSubmit} name="form">
+                <form action="" onSubmit={handleSubmit} name="form">
 
                     {formFieldInfo.map((item) => (
                         <InputField
@@ -96,13 +87,12 @@ class Form extends Component {
                             name={item.name}
                             placeHolder={item.placeHolder}
                             type={item.type}
-                            value={this.state.value}
-                            handleInputChange={this.handleChange}
+                            handleInputChange={handleChange}
                         />
                     ))}
                     <div className="form-field">
                         <label>Choose Your City</label>
-                        <select name="city" className="input-field" value={this.state.value} onChange={(event) => this.handleChange()}>
+                        <select name="city" className="input-field" onChange={(event) => handleChange()}>
                             <option default className="selector-field">Choose Your City</option>
                             <option value="Jordan">Jordan</option>
                             <option value="Japan">Japan</option>
@@ -118,7 +108,6 @@ class Form extends Component {
             </>
         );
     }
-}
 
 
 export default Form;

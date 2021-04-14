@@ -8,6 +8,7 @@ const formFieldInfo = [{
     name: "email",
     placeHolder: "Email Address",
     type: "email",
+    value: ""
 },
 {
     contentOfError: "Company name can't be empty",
@@ -19,6 +20,7 @@ const formFieldInfo = [{
     name: "companyName",
     placeHolder: "Company Name",
     type: "text",
+    value: ""
 },
 {
     contentOfError: "Password must contains a mix of letters, numbers &symbols",
@@ -30,6 +32,7 @@ const formFieldInfo = [{
     name: "password",
     placeHolder: "Password",
     type: "password",
+    value: ""
 },
 
 {
@@ -42,6 +45,7 @@ const formFieldInfo = [{
     name: "passwordCheck",
     placeHolder: "Confirm password",
     type: "password",
+    value: ""
 }
 
 ];

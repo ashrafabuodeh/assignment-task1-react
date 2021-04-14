@@ -11,9 +11,8 @@
 }
 
 body {
-  background: #E5E5E5;
+  background-color: rgb(231, 238, 238);
 }
 .wrapper {
-  background-color: rgb(231, 238, 238);
   margin: 0 auto;
 }

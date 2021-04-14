@@ -2,16 +2,16 @@ import React from 'react';
 import './FormHeder.css';
 
 
-function FormHeader(){
+function FormHeader() {
 
     return (
         <>
-        <div className="header">
-        <div className="header-title">
-            <h1>Create Account</h1>
-        </div>
-    </div>
-    </>
+            <div className="header">
+                <div className="header-title">
+                    <h1>Create Account</h1>
+                </div>
+            </div>
+        </>
     );
 }
 

@@ -23,5 +23,4 @@ function GridItems() {
     );
   }
 
-
 export default GridItems;

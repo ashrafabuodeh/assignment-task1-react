@@ -3,43 +3,43 @@ const navItem = [
         activeItem : "nav-items menu-item",
         href :"/Home",
         id : 0,
-        linkName: 'Home'
+        label: 'Home'
     },
     {
         activeItem : "nav-items menu-item",
         href:"/AboutUs",
         id : 1 ,
-        linkName: 'About Us'
+        label: 'About Us'
     },
     {
         activeItem : "nav-items menu-item",
         href : "/Ourlands",
         id : 2,
-        linkName: 'Ourlands'
+        label: 'Ourlands'
     },
     {
         activeItem : "nav-items menu-item",
         href :"/Suppliers",
         id : 3 ,
-        linkName: 'Suppliers'
+        label: 'Suppliers'
     },
     {
         activeItem : "nav-items menu-item",
         href:"/Products",
         id : 4 ,
-        linkName: 'Products'
+        label: 'Products'
     },
     {
         activeItem : "nav-items menu-item",
         href: "/ContactUs",
         id : 5,
-        linkName: 'Contact Us'
+        label: 'Contact Us'
     },
     {
         activeItem : "nav-items menu-item",
         href:"LogOut",
         id : 6 ,
-        linkName: 'Log Out'
+        label: 'Log Out'
     }
 ];
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import "./NavBar.css";
 
-function NavBar({ handleActiveItem, href, id, linkName, nameOfClass }) {
+function NavBar({ handleActiveItem, href, id, label, nameOfClass }) {
 
   return (
     <>
@@ -11,7 +11,7 @@ function NavBar({ handleActiveItem, href, id, linkName, nameOfClass }) {
         onClick={() => handleActiveItem(id)}
         id={id}
       >
-        {linkName}
+        {label}
       </Link>
     </>
   );

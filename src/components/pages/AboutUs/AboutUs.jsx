@@ -13,7 +13,7 @@ function AboutUs() {
     }
 
     return (
-        <div className="centerCardItem">
+        <div className="center-card-item">
             <CardItem
                 alt={cardItemById().img}
                 brief={cardItemById().brief}

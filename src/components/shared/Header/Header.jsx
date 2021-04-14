@@ -9,15 +9,15 @@ import "./Header.css";
 
 function Header() {
 
-  const [isClicked, setClickedIcon] = useState(false);
-  const [navItems, setNavItem] = useState(navItem);
+  const [isClicked, setIsClicked] = useState(false);
+  const [navItems, setNavItems] = useState(navItem);
 
   const toggleDisplay = () => {
     return isClicked ? "displayNavItems" : "";
   }
 
   const handleBurgerIconClick = () => {
-    setClickedIcon(!isClicked);
+    setIsClicked(!isClicked);
   };
 
   const handleItem = (id) => {
@@ -25,7 +25,7 @@ function Header() {
       (item) => item.activeItem = "nav-items menu-item"
     );
     navItems[id].activeItem = allNavItems[id] + " active";
-    setNavItem([...navItems]);
+    setNavItems([...navItems]);
   };
 
 
@@ -52,7 +52,7 @@ function Header() {
               href={item.href}
               id={item.id}
               key={item.id}
-              linkName={item.linkName}
+              label={item.label}
               nameOfClass={item.activeItem}
             />
           ))}

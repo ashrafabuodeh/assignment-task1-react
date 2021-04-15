@@ -13,10 +13,14 @@
 body {
   background: #E5E5E5;
 }
-
 .wrapper {
-    margin: 0 auto;
-    max-width: 1440px;
-    width: 100%;
+  margin: 0 auto;
+  max-width: 1900px;
+  width:100%;
+}
+
+.title{
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
 

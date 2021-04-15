@@ -1,0 +1,52 @@
+.card-item {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.125);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-body {
+   margin-bottom: 70px;
+}
+
+.card-color{
+     background-color: turquoise; 
+}
+
+.card-title {
+    margin-bottom: 8px;
+    text-decoration: solid;
+}
+
+button {
+    background-color: #39c0ed;
+    border: 0;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 1.5;
+    margin-left: 10px;
+    padding: 10px 24px 8px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    width: 100px;
+}
+
+.card-body {
+    margin-right: 80px;
+    text-align: left;
+}
+
+img {
+    vertical-align: middle;
+    width: 451px;
+}
+
+

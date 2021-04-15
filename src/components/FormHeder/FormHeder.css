@@ -1,7 +1,8 @@
-.header {
+.form-header {
     height: 110px;
     padding-top: 10px;
-    align-items: center;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .header-title {

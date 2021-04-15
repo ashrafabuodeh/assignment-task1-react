@@ -22,7 +22,7 @@
 
 .display-error {
     background-color: red;
-    display: none;
+    display:none;
     margin-bottom: 5px;
     padding: 20px;
 }

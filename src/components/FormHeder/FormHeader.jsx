@@ -6,7 +6,7 @@ function FormHeader() {
 
     return (
         <>
-            <div className="header">
+            <div className="form-header">
                 <div className="header-title">
                     <h1>Create Account</h1>
                 </div>

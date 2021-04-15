@@ -1,0 +1,9 @@
+.center-card-item{
+  margin: 100px 0 0 490px;
+}
+
+@media screen and (max-width: 765px) {
+   .center-card-item{
+       margin: 0;
+   }
+  }

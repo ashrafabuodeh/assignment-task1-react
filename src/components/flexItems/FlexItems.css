@@ -1,0 +1,19 @@
+.coffee-item {
+    background-color: white;
+    height: 450px;
+    margin: 50px;
+    text-align: center;
+    width: 217px;
+}
+
+@media screen and (max-width :621px) {
+    .caramel-frappe-coffee {
+        display: none;
+    }
+}
+
+@media screen and (max-width :926px) {
+    .mocha-late-coffee {
+        display: none;
+    }
+}

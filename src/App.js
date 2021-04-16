@@ -6,7 +6,6 @@ function App() {
 
   return (
     <div className = "wrapper">
-      <h1 className = "title">Lorem Ipsum</h1>
       <Items />
     </div>
 

@@ -4,6 +4,7 @@ import './GridCardItems.css'
 
 function GridCardItems() {
 
+    const [count, setCount] = useState(0);
     const [data, setData] = useState([]);
     useEffect(() => {
         const url = "https://jsonplaceholder.typicode.com/photos";
@@ -13,20 +14,31 @@ function GridCardItems() {
 
     }, []);
 
+    const handleActiveNumberOfCardItem = (numberOfClickOnCardItem) => {
+        if (numberOfClickOnCardItem === 1)
+            setCount(count - 1);
+        else
+            setCount(count + 1);
+    }
+
     return (
-        <div className = "grid-cards">
-            {data.map((info) =>
-                <LoremCard
-                    albumId = { info.albumId }
-                    brief = { info.title }
-                    id = { info.id }
-                    key = { info.id }
-                    thumbnailUrl = { info.thumbnailUrl }
-                    title = { info.title } 
-                    url = { info.url }
-                />
-            )}
-        </div>
+        <>
+            <h1 className="title"> Number of Active Lorem Ipsum cards : {count} </h1>
+            <div className="grid-cards">
+                {data.map((info) =>
+                    <LoremCard
+                        albumId={info.albumId}
+                        brief={info.title}
+                        handleActiveNumberOfCardItem={handleActiveNumberOfCardItem}
+                        id={info.id}
+                        key={info.id}
+                        thumbnailUrl={info.thumbnailUrl}
+                        title={info.title}
+                        url={info.url}
+                    />
+                )}
+            </div>
+        </>
     );
 
 }

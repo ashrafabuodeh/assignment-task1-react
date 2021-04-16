@@ -1,37 +1,35 @@
 import propTypes from 'prop-types';
 import React, { useState } from 'react';
-import './LoremCard.css' ;
+import './LoremCard.css';
 
-function LoremCard({ albumId, brief, id, thumbnailUrl, title, url }) {
+function LoremCard({ albumId, brief, id, thumbnailUrl, title, url, handleActiveNumberOfCardItem }) {
 
-    const [cardColor , setCardColor] = useState('');
-    const [count , setCount] = useState(0);
+    const [cardColor, setCardColor] = useState('');
+    const [count, setCount] = useState(0);
 
-    const handleActiveCard = ()=>{
-
-        if(cardColor === "card-color" )
-        {
-          setCardColor("");
-          setCount(count-1);
+    const handleActiveCard = () => {
+        if (cardColor === "card-color") {
+            setCardColor("");
+            setCount(count - 1);
         }
-        else{
+        else {
             setCardColor("card-color");
-            setCount(count+1);
+            setCount(count + 1);
         }
-     }
+    }
 
-return (
+    return (
 
-    <div className = {cardColor}>
-        <img src = {url} alt = "Lorem card"/>
-       <div className = "card-body">
-        <p className = "card-title">{title}</p>
-        <p>{brief}{brief}</p>  
-        <button  onClick = {handleActiveCard} >Button</button>
+        <div className={cardColor}>
+            <img src={url} alt="Lorem card" />
+            <div className="card-body">
+                <p className="card-title">{title}</p>
+                <p>{brief}{brief}</p>
+                <button onClick={() => { handleActiveCard(); handleActiveNumberOfCardItem(count) }} >Button</button>
+            </div>
         </div>
-    </div>
-    
-);
+
+    );
 
 
 }
@@ -48,5 +46,5 @@ LoremCard.prototype = {
     url: propTypes.string.isRequired
 }
 
-export default LoremCard ;
+export default LoremCard;
 

@@ -1,28 +1,25 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Header } from './components';
-import { HomePage, AboutUs } from '../src/components/pages';
+import { Items } from '../src/components/pages';
+import { LoremCard } from '../src/components'
 import React from 'react';
 import './App.css';
 
 function App() {
 
   return (
-    <Router>
-      <div className="wrapper">
-        <Header />
+    <div className="wrapper">
+      <Router>
         <Switch>
           <Route exact path="/">
-            <HomePage />
+            <Items />
           </Route>
-          <Route exact path="/Home">
-            <HomePage />
-          </Route>
-          <Route exact path="/AboutUs/:id">
-            <AboutUs />
+          <Route exact path="/carditem/:id">
+            <LoremCard />
           </Route>
         </Switch>
-      </div>
-    </Router>
+      </Router>
+    </div>
+
   );
 }
 

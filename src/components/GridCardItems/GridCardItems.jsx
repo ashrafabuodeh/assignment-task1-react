@@ -27,12 +27,10 @@ function GridCardItems() {
             <div className="grid-cards">
                 {data.map((info) =>
                     <LoremCard
-                        albumId={info.albumId}
                         brief={info.title}
                         handleActiveNumberOfCardItem={handleActiveNumberOfCardItem}
                         id={info.id}
                         key={info.id}
-                        thumbnailUrl={info.thumbnailUrl}
                         title={info.title}
                         url={info.url}
                     />

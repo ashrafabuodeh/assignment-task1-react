@@ -1,24 +1,36 @@
-import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import propTypes from "prop-types";
+import React from "react";
 import "./NavBar.css";
 
-function NavBar(props) {
-
-  const { handleActiveItem, href, id, name, nameOfClass } = props;
+function NavBar({ handleActiveItem, href, id, name, nameOfClass }) {
   
   return (
     <>
-      <Link to = { href }
-        className = { nameOfClass }
-        onClick ={ () => handleActiveItem(id) }
-        id={ id }
+      <Link
+        className={nameOfClass}
+        id={id}
+        onClick={() => handleActiveItem(id)}
+        to={href}
       >
-        { name }
+        {name}
       </Link>
     </>
   );
 }
 
+NavBar.protoTypes = {
+  handleActiveItem: propTypes.func,
+  href: propTypes.string.isRequired,
+  id: propTypes.number.isRequired,
+  name: propTypes.string.isRequired,
+  nameOfClass: propTypes.string.isRequired,
+};
+
+NavBar.defaultProps = {
+  handleActiveItem: null,
+};
+
+
 
 export default NavBar;
-

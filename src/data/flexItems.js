@@ -1,5 +1,5 @@
-import icedCoffee from '../assets/iced-coffee.png';
 import caramelFrappe from '../assets/caramel-frappe.png';
+import icedCoffee from '../assets/iced-coffee.png';
 import mochaLate from '../assets/mocha-late.png';
 
 const cardItemInfo = [

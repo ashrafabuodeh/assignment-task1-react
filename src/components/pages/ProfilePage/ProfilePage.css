@@ -1,0 +1,19 @@
+.upload-image{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    width: 450px;
+}
+
+.input-file{
+    padding: 5px;
+}
+
+
+.profile-picture{
+    margin-left: 1000px;
+    margin-top: 10px;
+    text-align: left;
+    width: 100px;
+}

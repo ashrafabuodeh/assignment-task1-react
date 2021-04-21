@@ -1,33 +1,31 @@
-import { NavBar } from "../../../components"
+import { NavBar } from "../../../components";
 import { navItem } from "../../../data";
 import coffeeBeans from "../../../assets/coffee-beans.png";
 import iconMenu from "../../../assets/menu.png";
 import profileImage from "../../../assets/profile-image.png";
+import propTypes from "prop-types";
 import React, { useState } from "react";
 import shoppingCart from "../../../assets/shopping-cart.png";
 import "./Header.css";
 
-function Header() {
-
-  const [isClicked , setClickedIcon] = useState(false);
+function Header({ email }) {
+  const [isClicked, setClickedIcon] = useState(false);
   const [navItems, setNavItem] = useState(navItem);
-
-  const toggleDisplay = ()=> {
-    return isClicked ? "displayNavItems" : "" ;
-  }
+  const toggleDisplay = () => {
+    return isClicked ? "displayNavItems" : "";
+  };
 
   const handleBurgerIconClick = () => {
-   setClickedIcon(!isClicked);
+    setClickedIcon(!isClicked);
   };
- 
+
   const handleItem = (id) => {
     const allNavItems = navItems.map(
-      (item) => item.activeItem = "nav-items menu-item" 
+      (item) => (item.activeItem = "nav-items menu-item")
     );
     navItems[id].activeItem = allNavItems[id] + " active";
     setNavItem([...navItems]);
   };
-
 
   return (
     <>
@@ -45,7 +43,7 @@ function Header() {
           onClick={() => handleBurgerIconClick()}
           src={iconMenu}
         />
-        <div className={"all-links-navbar "+ toggleDisplay()}>
+        <div className={"all-links-navbar " + toggleDisplay()}>
           {navItems.map((item) => (
             <NavBar
               handleActiveItem={handleItem}
@@ -63,17 +61,21 @@ function Header() {
             className="shopping-cart-size"
             src={shoppingCart}
           />
-          <img
-            alt="profile image"
-            className="profile-image"
-            src={profileImage}
-          />
+          <a href={`/profilepage/${email}`}>
+            <img
+              alt="profile image"
+              className="profile-image"
+              src={profileImage}
+            />
+          </a>
         </div>
       </div>
     </>
   );
 }
 
+Header.protoTypes = {
+  email: propTypes.string.isRequired,
+};
 
 export default Header;
-

@@ -32,8 +32,8 @@ function Main() {
             </p>
             <p className="google-sans-font text-below-barnsley-coffee">
               Coffee is a brewed drink prepared from roasted coffee beans, the
-              seeds of berries from certain Coffea species. When coffee
-              berries turn from.
+              seeds of berries from certain Coffea species. When coffee berries
+              turn from.
             </p>
             <p>Top Packs</p>
           </div>
@@ -47,7 +47,6 @@ function Main() {
                 title={item.title}
               ></FlexItems>
             ))}
-
             <div className="view-more-img">
               <img src={viewMore} alt="view more" />
               <p className="product-sans-font">View More</p>
@@ -59,6 +58,4 @@ function Main() {
   );
 }
 
-
 export default Main;
-

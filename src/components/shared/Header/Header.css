@@ -38,6 +38,7 @@
   width: 35px;
 }
 
+
 @media screen and (max-width: 500px) {
   .profile-image {
     display: none;
@@ -50,10 +51,10 @@
 
 @media screen and (max-width: 1115px) {
   .all-links-navbar {
-    position: relative;
     background-color: rgb(145, 139, 139);
     flex-direction: column;
     margin: 450px 150px 0 1px;
+    position: relative;
     visibility: hidden;
     width: 100%;
   }

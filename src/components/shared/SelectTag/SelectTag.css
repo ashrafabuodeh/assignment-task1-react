@@ -1,0 +1,14 @@
+.input-field {
+    padding: 25px 0;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    width: 450px;
+}
+
+.display-error{
+    display: none;
+}

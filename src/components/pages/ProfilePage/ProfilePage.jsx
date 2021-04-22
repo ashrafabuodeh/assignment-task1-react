@@ -105,6 +105,10 @@ function ProfilePage() {
     reader.readAsDataURL(file);
   };
 
+  const isDisplayedCity = () => {
+    return userData['city'] === 'Choose Your City' ? true : false;
+  };
+
   return (
     <>
       <img
@@ -135,6 +139,7 @@ function ProfilePage() {
         <SelectTag
           defaultValue={userData["city"]}
           handleInputChange={handleChange}
+          isDisplayed={isDisplayedCity()}
           name="city"
           onSubmit={handleSubmit}
         />
@@ -147,7 +152,7 @@ function ProfilePage() {
             type="file"
           />
         </div>
-        <Button label={"Edit Profile"} />
+        <Button label={"edit profile"} />
       </form>
       <h3 style={{ display: flag ? "inline-block" : "none" }}>
         Your Personal Information Updated successfully

@@ -73,7 +73,7 @@ function LogIn() {
             type={item.type}
           />
         ))}
-        <Button label={"LOGIN"} />
+        <Button label={"login"} />
       </form>
     </div>
   );

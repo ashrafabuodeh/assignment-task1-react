@@ -49,6 +49,7 @@ function InputField({
 
 InputField.protoTypes = {
   contentOfError: propTypes.string.isRequired,
+  defaultValue: propTypes.string,
   errorClass: propTypes.string.isRequired,
   formFieldClass: propTypes.string.isRequired,
   handleInputChange: propTypes.func,
@@ -60,6 +61,7 @@ InputField.protoTypes = {
   name: propTypes.string.isRequired,
   placeHolder: propTypes.string.isRequired,
   type: propTypes.string.isRequired,
+
 };
 
 
